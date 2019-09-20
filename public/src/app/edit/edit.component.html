@@ -1,0 +1,13 @@
+<a [routerLink]="['/']">Home</a>
+<div class="container">
+  <p>Edit this author:</p>
+  <p id="error">{{error}}</p>
+  <form (submit)="editAuthor(updateAuthor._id)">
+    <div class="form-group">
+      <label for="updateAuthor.name">Name:</label>
+      <input type="text" class="form-control" id="name" name="updateAuthor.name" [(ngModel)]="updateAuthor.name">
+    </div>
+    <button [routerLink]="['/']" class="btn btn-primary">Cancel</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
